@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contest Entry Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Contest Entry Form</h1>
+    <form id="entryForm" action="submit.php" method="post">
+        <div class="form-group">
+            <label for="firstname">First Name <span class="required">*</span></label>
+            <input type="text" id="firstname" name="firstname" required minlength="2" maxlength="35">
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name <span class="required">*</span></label>
+            <input type="text" id="lastname" name="lastname" required minlength="2" maxlength="35">
+        </div>
+        <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Your Age <span class="required">*</span></label>
+            <input type="number" id="age" name="age" required min="21" max="120">
+            <h5>You must be 21 years or older to enter the contest.</h5>
+        </div>
+        <div class="form-group">
+            <label for="zipcode">ZIP Code <span class="required">*</span></label>
+            <input type="text" id="zipcode" name="zipcode" required pattern="[0-9]{5}" title="5-Digit US ZIP Code">
+        </div>
+        <div class="form-group">
+            <label for="passcode">Your Secret Code (must be 6 alphanumeric characters) <span class="required">*</span></label>
+            <input type="password" id="passcode" name="passcode" required pattern="[A-Za-z0-9]{6}" title="6 Alphanumeric Character Passcode">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
